@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ExperienciaService } from 'src/app/service/experienciaService';
+
 
 @Component({
   selector: 'app-experiencia',
@@ -7,11 +9,14 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./experiencia.component.css']
 })
 export class ExperienciaComponent implements OnInit {
- experienciaList:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  experienciaList: any;
+  constructor(private datosexperiencia: ExperienciaService, private activatedRoute: ActivatedRoute, private router: Router) { }
+
   ngOnInit(): void {
-   this.datosPortfolio.obtenerDatos().subscribe(data =>{
+  this.datosexperiencia.verExperiencia().subscribe(data =>{
+      console.log(data);
       this.experienciaList=data;
     })
   }
+
 }

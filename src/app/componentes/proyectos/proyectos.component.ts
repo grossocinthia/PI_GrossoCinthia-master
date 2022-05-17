@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ProyectoService } from 'src/app/service/proyectoService';
+
 
 
 
@@ -9,11 +11,12 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent implements OnInit {
-proyectoList:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  proyectoList: any;
+  constructor(private datosproyecto: ProyectoService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data =>{
+  this.datosproyecto.verProyecto().subscribe(data =>{
+      console.log(data);
       this.proyectoList=data;
     })
   }

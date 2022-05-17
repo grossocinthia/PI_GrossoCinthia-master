@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PersonaService } from 'src/app/service/personaService';
+
 
 
 @Component({
@@ -8,15 +10,22 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
- miPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) { 
-  this.datosPortfolio.obtenerDatos().subscribe(data =>{
+  Persona:any;
+
+  constructor(
+    private datospersona: PersonaService, private activatedRoute: ActivatedRoute, private router: Router) {
+    
+    this.datospersona.verPersona().subscribe(
+    data => {
       console.log(data);
-      this.miPortfolio=data;
-    });
-  }
+      this.Persona = data[0];
+    },
+   
+  ); }
 
   ngOnInit(): void {
   }
 
+  
 }
+

@@ -2,21 +2,21 @@ export class Experiencia {
      
     id?: number;
     empresa: string;
-    comienzo: string;
-    imagen: string;
-    fin: string;
+    comienzoEx: string;
+    imagenEx: string;
+    finEx: string;
     posicion: string;
     tipoEmpleo: string;
    
 
-    constructor(empresa: string, posicion: string, comienzo: string, imagen: string, fin: string, tipoEmpleo:string){
+    constructor(empresa: string, posicion: string, comienzoEx: string, imagenEx: string, finEx: string, tipoEmpleo:string){
    
         this.empresa = empresa;
         this.posicion = posicion;
-        this.comienzo = comienzo;
-        this.fin = fin;
+        this.comienzoEx = comienzoEx;
+        this.finEx = finEx;
         this.tipoEmpleo = tipoEmpleo;
-        this.imagen = imagen;
+        this.imagenEx = imagenEx;
         
 }
 }

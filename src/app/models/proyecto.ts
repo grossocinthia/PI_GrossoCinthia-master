@@ -1,17 +1,17 @@
 export class Proyecto {
     id?: number;
-    titulo: string;
+    tituloProy: string;
     descripcion: string;
-    imagen: string;
+    imagenProy: string;
     link: string;
     
    
 
-    constructor(titulo: string, descripcion: string, link: string, imagen: string){
+    constructor(tituloProy: string, descripcion: string, link: string, imagenProy: string){
    
-        this.titulo = titulo;
+        this.tituloProy = tituloProy;
         this.descripcion = descripcion;
         this.link = link;
-        this.imagen = imagen;
+        this.imagenProy = imagenProy;
 }
 }

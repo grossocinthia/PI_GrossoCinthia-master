@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { ActivatedRoute, Router } from '@angular/router';
+import { EscuelaService } from 'src/app/service/escuelaService';
+
 
 
 
@@ -11,12 +13,17 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 export class EducacionComponent implements OnInit {
   
   escuelaList: any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosescuela: EscuelaService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-  this.datosPortfolio.obtenerDatos().subscribe(data =>{
+  this.datosescuela.verEscuela().subscribe(data =>{
+      console.log(data);
       this.escuelaList=data;
     })
   }
 
 }
+
+   
+
+

@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+/*import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Persona } from '../models/persona';
@@ -11,8 +11,8 @@ export class PortfolioService {
   constructor(private http:HttpClient) { }
 
   public obtenerDatos():Observable<Persona>{
-    return this.http.get<Persona>(this.url + 'persona/ver');
+    return this.http.get<Persona>(this.url + '/ver');
   }
 }
- 
+ */
 

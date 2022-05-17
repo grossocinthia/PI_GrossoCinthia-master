@@ -2,21 +2,21 @@ export class Escuela {
     
     id?: number;
     institucion: string;
-    comienzo: string;
-    imagen: string;
-    fin: string;
+    comienzoEd: string;
+    imagenEd: string;
+    finEd: string;
     titulo: string;
     estado: string;
    
 
-    constructor(institucion: string, titulo: string, comienzo: string, imagen: string, fin: string, estado:string){
+    constructor(institucion: string, titulo: string, comienzoEd: string, imagenEd: string, finEd: string, estado:string){
    
         this.institucion = institucion;
         this.titulo = titulo;
-        this.comienzo = comienzo;
-        this.fin = fin;
+        this.comienzoEd = comienzoEd;
+        this.finEd = finEd;
         this.estado = estado;
-        this.imagen = imagen;
+        this.imagenEd = imagenEd;
         
     }
 

@@ -13,13 +13,13 @@
         <li *ngFor="let proyecto of proyectoList">
     <div id="imagen" class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
         <div>
-            <img [src]="proyecto.imagen"class="img-fluid">
+            <img [src]="proyecto.imagenProy"class="img-fluid">
         </div>
 </div>
 <div id="acerca" class="col-xs-12 col-sm-4 col-md-6 col-lg-7">
  <span>
     <div><i class="fas fa-pen" ></i> </div>
-    <p class="h4">{{proyecto.titulo}}</p>
+    <p class="h4">{{proyecto.tituloProy}}</p>
     <p class="cuerpo">{{proyecto.descripcion}} </p>
     <a href= {{proyecto.link}} class="btn btn-primary" target="_blank">Ver Proyecto</a>
  </span>

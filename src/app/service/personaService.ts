@@ -21,8 +21,8 @@ url = 'http://localhost:8080/api/persona/';
   }
 
 
-  public agregarPersona(producto: Persona): Observable<any> {
-    return this.httpClient.post<any>(this.url + 'new', Persona);
+  public agregarPersona(persona: Persona): Observable<any> {
+    return this.httpClient.post<any>(this.url + 'new', persona);
   }
 
   public editarPersona(id: number, persona: Persona): Observable<any> {

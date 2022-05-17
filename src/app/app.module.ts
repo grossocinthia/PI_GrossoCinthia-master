@@ -19,6 +19,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegistroComponent } from './auth/registro/registro.component';
 import { FormsModule }   from '@angular/forms';
 import { BarraComponent } from './componentes/barra/barra.component';
+import { interceptorProvider } from './interceptor/personaInterceptorService';
 
 
 
@@ -47,7 +48,7 @@ import { BarraComponent } from './componentes/barra/barra.component';
     ReactiveFormsModule,
     FormsModule 
   ],
-  providers: [
+  providers: [interceptorProvider
 ],
   bootstrap: [AppComponent]
 })

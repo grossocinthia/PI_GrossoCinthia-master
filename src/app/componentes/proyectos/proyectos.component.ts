@@ -14,7 +14,7 @@ proyectoList:any;
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data =>{
-      this.proyectoList=data.proyecto;
+      this.proyectoList=data;
     })
   }
 

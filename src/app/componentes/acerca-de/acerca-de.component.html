@@ -1,0 +1,36 @@
+<div class="container">
+    
+ 
+    <div class="row">
+
+  
+        <div id="datos" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <div id="fotoperfil">
+                    <div> <img [src]="miPortfolio.imagen" class="img-fluid"></div>
+            </div>
+                <div id="nombre" >
+                    <div><i class="fas fa-pen" ></i> </div>
+                    <p class="h3">{{miPortfolio.nombreCompleto}}</p>
+                    <p class="h5">{{miPortfolio.titulos}}</p>
+                    <p class="h6">{{miPortfolio.ubicacion}} - Cel: {{miPortfolio.telefono}}</p>
+
+    </div>
+    </div>
+        <div id="acerca" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+         <span>
+            <div><i class="fas fa-pen" ></i> </div>
+            <p class="h4">Acerca de Mi</p> 
+            
+            <p class="cuerpo">
+                {{miPortfolio.acerca}}
+            </p>
+         </span>
+        </div>
+    </div>
+            <div id="bot"><a href="" class="btn btn-primary">Tengo interés en </a></div>
+            <div id="bot2"><a href="" class="btn btn-primary">Ver Proyecto</a></div>
+            
+    <div class="separador"> </div>
+</div>
+    
+   

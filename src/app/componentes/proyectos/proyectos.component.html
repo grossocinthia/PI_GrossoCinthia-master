@@ -1,0 +1,34 @@
+<div class="container">
+
+    <div class="row">
+                <div id="proyectos" class="col-12" >
+                    <div><i class="fas fa-plus" ></i> </div>
+                    <p class="h3">Proyectos</p>
+                    <div class="separador"> </div>
+                    
+
+    </div>
+    <ul>
+    <div class="row">
+        <li *ngFor="let proyecto of proyectoList">
+    <div id="imagen" class="col-xs-12 col-sm-8 col-md-6 col-lg-5">
+        <div>
+            <img [src]="proyecto.imagen"class="img-fluid">
+        </div>
+</div>
+<div id="acerca" class="col-xs-12 col-sm-4 col-md-6 col-lg-7">
+ <span>
+    <div><i class="fas fa-pen" ></i> </div>
+    <p class="h4">{{proyecto.titulo}}</p>
+    <p class="cuerpo">{{proyecto.descripcion}} </p>
+    <a href= {{proyecto.link}} class="btn btn-primary" target="_blank">Ver Proyecto</a>
+ </span>
+</div>
+        </li>
+        </div>
+    </ul>
+
+    </div>
+</div>
+    
+    

@@ -6,7 +6,7 @@ import { TokenService } from '../service/token-service.service';
 @Injectable({
   providedIn: 'root'
 })
-export class PerInterceptorServiceService implements HttpInterceptor {
+export class PersonaInterceptorService implements HttpInterceptor {
 
   constructor(private tokenService: TokenService) { }
 
@@ -20,4 +20,4 @@ export class PerInterceptorServiceService implements HttpInterceptor {
   }
 }
 
-export const interceptorProvider = [{provide: HTTP_INTERCEPTORS, useClass: PerInterceptorServiceService, multi: true}];
+export const interceptorProvider = [{provide: HTTP_INTERCEPTORS, useClass: PersonaInterceptorService, multi: true}];

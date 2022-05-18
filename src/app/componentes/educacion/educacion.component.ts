@@ -13,17 +13,26 @@ import { EscuelaService } from 'src/app/service/escuelaService';
 export class EducacionComponent implements OnInit {
   
   escuelaList: any;
+  
   constructor(private datosescuela: EscuelaService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   this.datosescuela.verEscuela().subscribe(data =>{
       console.log(data);
       this.escuelaList=data;
-    })
+    });
   }
+  borrarEscuela(id: number) {
+    this.datosescuela.borrarEscuela(id).subscribe(
+      data => {
+        console.log(data);
+        this.datosescuela.borrarEscuela;
+        this.ngOnInit();
+      },
+     
+    );
+  }
+  
 
 }
-
-   
-
 

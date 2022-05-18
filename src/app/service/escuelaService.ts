@@ -16,7 +16,7 @@ export class EscuelaService {
   }
 
   public buscarEscuela(id: number): Observable<Escuela> {
-    return this.httpClient.get<Escuela>(this.url + `ver/{id}`);
+    return this.httpClient.get<Escuela>(this.url + `ver/${id}`);
   }
 
 
@@ -25,10 +25,12 @@ export class EscuelaService {
   }
 
   public editarEscuela(id: number, escuela: Escuela): Observable<any> {
-    return this.httpClient.put<any>(this.url + `editar/{id}`, escuela);
+    return this.httpClient.put<any>(this.url + `editar/${id}`, escuela);
   }
 
   public borrarEscuela(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.url + `delete/{id}`);
+    return this.httpClient.delete<any>(this.url + `delete/${id}`);
   }
 }
+
+

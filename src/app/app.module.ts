@@ -20,6 +20,9 @@ import { RegistroComponent } from './auth/registro/registro.component';
 import { FormsModule }   from '@angular/forms';
 import { BarraComponent } from './componentes/barra/barra.component';
 import { interceptorProvider } from './interceptor/personaInterceptorService';
+import { CrearEdComponent } from './componentes/crear-ed/crear-ed.component';
+import { CrearExComponent } from './componentes/crear-ex/crear-ex.component';
+
 
 
 
@@ -37,7 +40,10 @@ import { interceptorProvider } from './interceptor/personaInterceptorService';
     PortfolioComponent,
     LoginComponent,
     RegistroComponent,
-    BarraComponent],
+    BarraComponent,
+    CrearEdComponent,
+    CrearExComponent,
+  ],
 
   imports: [
     BrowserModule,

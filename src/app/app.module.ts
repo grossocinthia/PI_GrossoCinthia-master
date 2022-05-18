@@ -22,6 +22,7 @@ import { BarraComponent } from './componentes/barra/barra.component';
 import { interceptorProvider } from './interceptor/personaInterceptorService';
 import { CrearEdComponent } from './componentes/crear-ed/crear-ed.component';
 import { CrearExComponent } from './componentes/crear-ex/crear-ex.component';
+import { CrearProyComponent } from './componentes/crear-proy/crear-proy.component';
 
 
 
@@ -43,6 +44,7 @@ import { CrearExComponent } from './componentes/crear-ex/crear-ex.component';
     BarraComponent,
     CrearEdComponent,
     CrearExComponent,
+    CrearProyComponent,
   ],
 
   imports: [

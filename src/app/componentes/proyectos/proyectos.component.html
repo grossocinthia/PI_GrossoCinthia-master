@@ -2,7 +2,7 @@
 
     <div class="row">
                 <div id="proyectos" class="col-12" >
-                    <div><i class="fas fa-plus"  ></i> </div>
+                    <div><i class="fas fa-plus" routerLink="/crearProy"  ></i> </div>
                     <p class="h3">Proyectos</p>
                     <div class="separador"> </div>
                     
@@ -18,7 +18,8 @@
 </div>
 <div id="acerca" class="col-xs-12 col-sm-4 col-md-6 col-lg-7">
  <span>
-    <div><i class="fas fa-pen" ></i> </div>
+    <div class="fas fa-trash" (click)="borrarProyecto(proyecto.id)" > </div>
+    <div class="fas fa-pen"> </div>
     <p class="h4">{{proyecto.tituloProy}}</p>
     <p class="cuerpo">{{proyecto.descripcion}} </p>
     <a href= {{proyecto.link}} class="btn btn-primary" target="_blank">Ver Proyecto</a>

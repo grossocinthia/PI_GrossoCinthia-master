@@ -22,7 +22,7 @@ export class ProyectosComponent implements OnInit {
       this.proyectoList=data;
     });
   }
-  borrarExperiencia(id: number) {
+  borrarProyecto(id: number) {
     this.datosproyecto.borrarProyecto(id).subscribe(
       data => {
         console.log(data);

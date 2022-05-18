@@ -16,7 +16,7 @@ export class ProyectoService {
   }
 
   public buscarProyecto(id: number): Observable<Proyecto> {
-    return this.httpClient.get<Proyecto>(this.url + `ver/{id}`);
+    return this.httpClient.get<Proyecto>(this.url + `ver/${id}`);
   }
 
 
@@ -25,10 +25,10 @@ export class ProyectoService {
   }
 
   public editarProyecto(id: number, proyecto: Proyecto): Observable<any> {
-    return this.httpClient.put<any>(this.url + `editar/{id}`, proyecto);
+    return this.httpClient.put<any>(this.url + `editar/${id}`, proyecto);
   }
 
   public borrarProyecto(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.url + `delete/{id}`);
+    return this.httpClient.delete<any>(this.url + `delete/${id}`);
   }
 }

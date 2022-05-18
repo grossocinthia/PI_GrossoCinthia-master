@@ -23,6 +23,10 @@ import { interceptorProvider } from './interceptor/personaInterceptorService';
 import { CrearEdComponent } from './componentes/crear-ed/crear-ed.component';
 import { CrearExComponent } from './componentes/crear-ex/crear-ex.component';
 import { CrearProyComponent } from './componentes/crear-proy/crear-proy.component';
+import { EditarPerfilComponent } from './componentes/editar-perfil/editar-perfil.component';
+import { EditarEducacionComponent } from './componentes/editar-educacion/editar-educacion.component';
+import { EditarExperienciaComponent } from './componentes/editar-experiencia/editar-experiencia.component';
+import { EditarProyectoComponent } from './componentes/editar-proyecto/editar-proyecto.component';
 
 
 
@@ -45,6 +49,10 @@ import { CrearProyComponent } from './componentes/crear-proy/crear-proy.componen
     CrearEdComponent,
     CrearExComponent,
     CrearProyComponent,
+    EditarPerfilComponent,
+    EditarEducacionComponent,
+    EditarExperienciaComponent,
+    EditarProyectoComponent,
   ],
 
   imports: [

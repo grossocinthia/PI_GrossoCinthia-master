@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { LoginUsuario } from 'src/app/models/login-usuario';
 import { AuthService } from 'src/app/service/auth-service.service';
 import { TokenService } from 'src/app/service/token-service.service';
-import { ToastrService } from 'ngx-toastr';
 import { FormsModule }   from '@angular/forms';
 
 @Component({

@@ -12,16 +12,18 @@ export class EditarProyectoComponent implements OnInit {
  
 
   proyectoList: any ;
+  id:number=0;
 
   
 
   constructor(private datosproyecto: ProyectoService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void { 
-   
-      this.datosproyecto.verProyecto().subscribe(data =>{
+
+    this.id= Number(this.activatedRoute.snapshot.paramMap.get('id'));
+    this.datosproyecto.buscarProyecto(this.id).subscribe(data =>{
       console.log(data);
-      this.proyectoList=data[0];
+      this.proyectoList=data ;
       
     });
       }

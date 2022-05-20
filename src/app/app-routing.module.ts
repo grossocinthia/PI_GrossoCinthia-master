@@ -4,6 +4,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { CrearEdComponent } from './componentes/crear-ed/crear-ed.component';
 import { CrearExComponent } from './componentes/crear-ex/crear-ex.component';
 import { CrearProyComponent } from './componentes/crear-proy/crear-proy.component';
+import { EditarPerfilComponent } from './componentes/editar-perfil/editar-perfil.component';
 import { EditarProyectoComponent } from './componentes/editar-proyecto/editar-proyecto.component';
 
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'crearEd', component: CrearEdComponent},
   { path: 'crearEx', component: CrearExComponent},
   { path: 'crearProy', component: CrearProyComponent},
-  { path: 'editarProy', component: EditarProyectoComponent},
+  { path: 'editarProy/:id', component: EditarProyectoComponent},
+  { path: 'editarPerfil', component: EditarPerfilComponent},
   
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 

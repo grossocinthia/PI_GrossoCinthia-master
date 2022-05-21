@@ -18,7 +18,7 @@
                         
                         <div id="acerca" class="col-xs-12 col-sm-6 col-md-6 col-lg-8">
                             <div class="fas fa-trash" (click)="borrarEscuela(escuela.id)"> </div>
-                            <div class="fas fa-pen"> </div>
+                            <div class="fas fa-pen" routerLink="/editarEd/{{escuela.id}}"> </div>
                             
                             <span><div><p class="h4">{{escuela.institucion}}  </p>
                                 <p>{{escuela.titulo}}</p>

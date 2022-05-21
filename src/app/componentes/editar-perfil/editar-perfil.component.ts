@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Persona } from 'src/app/models/persona';
 import { PersonaService } from 'src/app/service/personaService';
 
 @Component({
@@ -8,7 +9,6 @@ import { PersonaService } from 'src/app/service/personaService';
   styleUrls: ['./editar-perfil.component.css']
 })
 export class EditarPerfilComponent implements OnInit {
-
 
   persona: any ;
 
@@ -25,16 +25,16 @@ export class EditarPerfilComponent implements OnInit {
     });
       }
     
-      onUpdate(id: number) {
-        this.datosPersona.editarPersona(id, this.persona).subscribe(
+      onCreate(): void {
+        
+        this.datosPersona.agregarPersona(this.persona).subscribe(
           data => {
-            console.log(data);
-            this.datosPersona.editarPersona;
-            this.ngOnInit();
-        this.router.navigate(['/portfolio']);
-      },
-     
-    );
-  }
-
-}
+            
+            this.router.navigate(['/portfolio']);
+          })
+          
+        
+      }
+    
+    }
+    

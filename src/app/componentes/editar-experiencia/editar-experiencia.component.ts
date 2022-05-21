@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ExperienciaService } from 'src/app/service/experienciaService';
 
 @Component({
   selector: 'app-editar-experiencia',
@@ -7,9 +9,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarExperienciaComponent implements OnInit {
 
-  constructor() { }
+  experienciaList: any ;
+  id:number=0;
 
-  ngOnInit(): void {
+  
+
+  constructor(private datosexperiencia: ExperienciaService, private activatedRoute: ActivatedRoute, private router: Router) { }
+
+  ngOnInit(): void { 
+
+    this.id= Number(this.activatedRoute.snapshot.paramMap.get('id'));
+    this.datosexperiencia.buscarExperiencia(this.id).subscribe(data =>{
+      console.log(data);
+      this.experienciaList=data ;
+      
+    });
+      }
+    
+      onUpdate(id: number) {
+        this.datosexperiencia.editarExperiencia(id, this.experienciaList).subscribe(
+          data => {
+            console.log(data);
+            this.datosexperiencia.editarExperiencia;
+            this.ngOnInit();
+        this.router.navigate(['/portfolio']);
+      },
+     
+    );
   }
 
 }

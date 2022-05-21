@@ -1,3 +1,18 @@
+<div class="container-fluid"><div class="row">
+  
+    <div id="banner" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+     
+        <div > 
+            <img [src]="Persona.backimagen"  style="z-index: -3; position: relative; background-repeat: repeat;">
+        </div>
+        
+        <button type="button" class="btn btn-default btn-xs"></button>
+    
+    </div>
+    </div></div>
+
+
+
 <div class="container">
     
  
@@ -5,7 +20,7 @@
 
   
         <div id="datos" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <div id="fotoperfil">
+            <div id="fotoperfil"> 
                     <div> <img [src]="Persona.imagen" class="img-fluid"></div>
 
             </div>
@@ -19,7 +34,7 @@
     </div>
         <div id="acerca" class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
          <span>
-            <div><i class="fas fa-pen" routerLink="/editarPerfil" ></i> </div>
+            <div><i class="fas fa-pen" routerLink="/editarPerfil/{{Persona.id}}" ></i> </div>
             <p class="h4">Acerca de Mi</p> 
             
             <p class="cuerpo">

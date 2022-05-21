@@ -4,6 +4,8 @@ import { LoginComponent } from './auth/login/login.component';
 import { CrearEdComponent } from './componentes/crear-ed/crear-ed.component';
 import { CrearExComponent } from './componentes/crear-ex/crear-ex.component';
 import { CrearProyComponent } from './componentes/crear-proy/crear-proy.component';
+import { EditarEducacionComponent } from './componentes/editar-educacion/editar-educacion.component';
+import { EditarExperienciaComponent } from './componentes/editar-experiencia/editar-experiencia.component';
 import { EditarPerfilComponent } from './componentes/editar-perfil/editar-perfil.component';
 import { EditarProyectoComponent } from './componentes/editar-proyecto/editar-proyecto.component';
 
@@ -20,7 +22,10 @@ const routes: Routes = [
   { path: 'crearEx', component: CrearExComponent},
   { path: 'crearProy', component: CrearProyComponent},
   { path: 'editarProy/:id', component: EditarProyectoComponent},
-  { path: 'editarPerfil', component: EditarPerfilComponent},
+  { path: 'editarPerfil/:id', component: EditarPerfilComponent},
+  { path: 'editarEx/:id', component: EditarExperienciaComponent},
+  { path: 'editarEd/:id', component: EditarEducacionComponent},
+
   
   { path: '', redirectTo: '/login', pathMatch: 'full' },
 

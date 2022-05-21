@@ -15,8 +15,9 @@ export class AcercaDeComponent implements OnInit {
 
   constructor(
     private datospersona: PersonaService, private activatedRoute: ActivatedRoute, private router: Router) {
-    
-    this.datospersona.verPersona().subscribe(
+
+     
+   this.datospersona.verPersona().subscribe(
     data => {
       console.log(data);
       this.Persona = data[0];

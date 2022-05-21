@@ -1,13 +1,22 @@
 <app-barra></app-barra>
+
 <div class="container" *ngIf="persona">
+    
     <div class="row mt-5">
-        <div class="col-md-4 mx-auto">
-            <form (ngSubmit)="onUpdate(persona.id)" novalidate #f="ngForm">
+        <h4 class="titulo">Editar Perfil</h4>
+        <div class="col-md-6 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
                 <div class="form-group">
                     <label for="imagen">Url Imagen Perfil</label>
                     <input type="text" class="form-control" id="imagen" name="imagen"
                     [(ngModel)]="persona.imagen" required>
                 </div>
+                <div class="form-group">
+                    <label for="backimagen">Url Imagen Banner</label>
+                    <input type="text" class="form-control" id="backimagen" name="backimagen"
+                    [(ngModel)]="persona.backimagen" required>
+                </div>
+                
                 
                 <div class="form-group">
                     <label for="nombreCompleto">Nombre Completo</label>
@@ -31,16 +40,22 @@
                 </div>
                 <div class="form-group">
                     <label for="acerca">Acerca de mi</label>
-                    <input type="text" class="form-control" id="acerca" name="acerca"
+
+                  <!---  <input type="text" class="form-control" id="acerca" name="acerca"
                     [(ngModel)]="persona.acerca" required>
+                  -->
+<textarea name="acerca de mi" class="form-control" [(ngModel)]="persona.acerca" required  id="acerca"></textarea>
                 </div>
-               
+            <div class="centrar">
                 <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
                     <i class="fas fa-pencil-alt" ></i> Actualizar</button>
+
                 <button class="btn btn-outline-primary btn-block" routerLink="/portfolio">
                     <i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </div>   
             </form>
         </div>
     </div>
 </div>
 <app-footer></app-footer>
+
